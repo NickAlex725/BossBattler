@@ -35,7 +35,6 @@ public class PaladinTurn : State
     public override void Tick()
     {
         base.Tick();
-
         if(!_controller.DemonBoss.isAlive)
         {
             _stateMachine.ChangeState(_stateMachine.WinState);

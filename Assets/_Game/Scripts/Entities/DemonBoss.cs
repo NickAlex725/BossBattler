@@ -10,7 +10,7 @@ public class DemonBoss : Unit
     {
         if(!isTaunted)
         {
-            target = heros[Random.Range(0, 2)];
+            target = heros[Random.Range(0, 3)];
             if(!target.isAlive)
             {
                 Attack(target);

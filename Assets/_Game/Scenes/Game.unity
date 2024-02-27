@@ -3193,9 +3193,9 @@ MonoBehaviour:
   isTaunted: 0
   isTurnComplete: 0
   heros:
+  - {fileID: 1829979998}
   - {fileID: 525578157}
   - {fileID: 485710711}
-  - {fileID: 1829979998}
 --- !u!114 &1097888406
 MonoBehaviour:
   m_ObjectHideFlags: 0
