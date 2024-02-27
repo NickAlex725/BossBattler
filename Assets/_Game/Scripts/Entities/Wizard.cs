@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Wizard : Unit
 {
-    public void Fireball(Unit enemy)
+    public void Deathball(Unit enemy)
     {
-
+        enemy.TakeDamage(_strength);
+        _anim.SetTrigger("Deathball");
     }
 }

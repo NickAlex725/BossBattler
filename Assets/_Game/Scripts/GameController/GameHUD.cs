@@ -6,7 +6,6 @@ using TMPro;
 public class GameHUD : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _currentStateText;
-    [SerializeField] private GameObject _playerHUD;
 
     private GameObject _currentActiveHUD;
     

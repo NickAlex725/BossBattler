@@ -16,6 +16,7 @@ public class PaladinTurn : State
     public override void Enter()
     {
         base.Enter();
+        _controller.Paladin.ResetDefense();
         _controller.Paladin.isTurnComplete = false;
         _controller.Paladin.UnitUI.SetActive(true);
         _controller.GameHUD.UpdateStateText(_stateMachine.CurrentState);

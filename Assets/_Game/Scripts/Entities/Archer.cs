@@ -6,6 +6,7 @@ public class Archer : Unit
 {
     public void PiercingShot(Unit enemy)
     {
-
+        enemy.TakeDamage(_strength);
+        _anim.SetTrigger("PS");
     }
 }

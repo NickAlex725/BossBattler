@@ -16,11 +16,13 @@ public class DemonBoss : Unit
                 Attack(target);
             }
             target.TakeDamage(_strength);
+            _anim.SetTrigger("Attacking");
             isTurnComplete = true;
         }
         else
         {
             target.TakeDamage(_strength);
+            _anim.SetTrigger("Attacking");
             isTurnComplete = true;
             isTaunted = false;
         }

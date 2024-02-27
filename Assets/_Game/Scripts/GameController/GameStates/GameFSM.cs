@@ -8,7 +8,6 @@ public class GameFSM : StateMachineMB
     private GameController _controller;
 
     //state variables here
-    public GameSetupState SetupState { get; private set; }
     public PaladinTurn PaladinTurn { get; private set; }
     public WizardTurn WizardTurn { get; private set; }
     public ArcherTurn ArcherTurn { get; private set; }
@@ -20,7 +19,6 @@ public class GameFSM : StateMachineMB
     {
         _controller = GetComponent<GameController>();
         //state instantiation here
-        SetupState = new GameSetupState(this, _controller);
         PaladinTurn = new PaladinTurn(this, _controller);
         WizardTurn = new WizardTurn(this, _controller);
         ArcherTurn = new ArcherTurn(this, _controller);
@@ -31,6 +29,6 @@ public class GameFSM : StateMachineMB
 
     private void Start()
     {
-        ChangeState(SetupState);
+        ChangeState(PaladinTurn);
     }
 }

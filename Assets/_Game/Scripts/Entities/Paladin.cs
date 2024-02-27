@@ -7,5 +7,6 @@ public class Paladin : Unit
     public void Taunt(Unit enemy)
     {
         enemy.isTaunted = true;
+        _anim.SetTrigger("Taunting");
     }
 }

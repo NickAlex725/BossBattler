@@ -9,11 +9,13 @@ public class Unit : MonoBehaviour
     [SerializeField] protected int _strength;
     [SerializeField] protected int _magicAttack;
     [SerializeField] protected float _defense;
+    [SerializeField] protected float _defenseMultiplier;
     [SerializeField] protected Slider _healthSlider;
     [SerializeField] protected Animator _anim;
     [SerializeField] public GameObject UnitUI;
 
     protected Health _health;
+    private bool _isDefending;
     public bool isAlive;
     public bool isTaunted;
     public bool isTurnComplete;
@@ -34,11 +36,14 @@ public class Unit : MonoBehaviour
     public virtual void Attack(Unit target)
     {
         target.TakeDamage(_strength);
+        _anim.SetTrigger("Attacking");
     }
 
     public virtual void Defend()
     {
-        _defense = _defense * 1.5f;
+        _defense = _defense * _defenseMultiplier;
+        _isDefending = true;
+        _anim.SetTrigger("Defending");
     }
 
     public void TakeDamage(int damage)
@@ -54,5 +59,10 @@ public class Unit : MonoBehaviour
     public void EndTurn()
     {
         isTurnComplete = true;
+    }
+
+    public void ResetDefense()
+    {
+        _defense = _defense / _defenseMultiplier;
     }
 }
