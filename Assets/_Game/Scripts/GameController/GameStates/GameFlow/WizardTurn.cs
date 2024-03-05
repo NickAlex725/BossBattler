@@ -34,13 +34,16 @@ public class WizardTurn : State
     public override void Tick()
     {
         base.Tick();
-        if (!_controller.DemonBoss.isAlive)
+        if (_controller.Wizard.isTurnComplete)
         {
-            _stateMachine.ChangeState(_stateMachine.WinState);
-        }
-        else if (_controller.Wizard.isTurnComplete)
-        {
-            _stateMachine.ChangeState(_stateMachine.ArcherTurn);
+            if (_controller.Archer.isAlive)
+            {
+                _stateMachine.ChangeState(_stateMachine.ArcherTurn);
+            }
+            else
+            {
+                _stateMachine.ChangeState(_stateMachine.EnemyTurnState);
+            }
             _controller.Wizard.UnitUI.SetActive(false);
             _controller.Wizard.isTurnComplete = false;
         }

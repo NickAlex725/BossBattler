@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Wizard _wizard;
     [SerializeField] private Archer _archer;
     [SerializeField] private DemonBoss _demonBoss;
+    [SerializeField] private GameObject _loseText;
 
     public float TapLimitDuration => _tapLimitDuration;
 
@@ -34,6 +35,7 @@ public class GameController : MonoBehaviour
     public Wizard Wizard => _wizard;
     public Archer Archer => _archer;
     public DemonBoss DemonBoss => _demonBoss;
+    public GameObject LoseText => _loseText;
 
     public void LoadLevel(string sceneName)
     {

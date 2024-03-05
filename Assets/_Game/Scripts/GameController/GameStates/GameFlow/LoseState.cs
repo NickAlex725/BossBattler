@@ -16,7 +16,7 @@ public class LoseState : State
     public override void Enter()
     {
         base.Enter();
-
+        _controller.LoseText.SetActive(true);
         _controller.SFXManager.PlayLoseAudio();
         _controller.GameHUD.UpdateStateText(_stateMachine.CurrentState);
     }

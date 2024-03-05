@@ -35,12 +35,14 @@ public class Unit : MonoBehaviour
 
     public virtual void Attack(Unit target)
     {
+        UnitUI.SetActive(false);
         target.TakeDamage(_strength);
         _anim.SetTrigger("Attacking");
     }
 
     public virtual void Defend()
     {
+        UnitUI.SetActive(false);
         _defense = _defense * _defenseMultiplier;
         _isDefending = true;
         _anim.SetTrigger("Defending");

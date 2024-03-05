@@ -35,14 +35,21 @@ public class PaladinTurn : State
     public override void Tick()
     {
         base.Tick();
-        if(!_controller.DemonBoss.isAlive)
+        if(_controller.Paladin.isTurnComplete)
         {
-            _stateMachine.ChangeState(_stateMachine.WinState);
-        }
-        else if(_controller.Paladin.isTurnComplete)
-        {
-            _stateMachine.ChangeState(_stateMachine.WizardTurn);
-            _controller.Paladin.UnitUI.SetActive(true);
+            if(_controller.Wizard.isAlive)
+            {
+                _stateMachine.ChangeState(_stateMachine.WizardTurn);
+            }
+            else if(_controller.Archer.isAlive)
+            {
+                _stateMachine.ChangeState(_stateMachine.ArcherTurn);
+            }
+            else
+            {
+                _stateMachine.ChangeState(_stateMachine.EnemyTurnState);
+            }
+            _controller.Paladin.UnitUI.SetActive(false);
             _controller.Paladin.isTurnComplete = false;
         }
     }

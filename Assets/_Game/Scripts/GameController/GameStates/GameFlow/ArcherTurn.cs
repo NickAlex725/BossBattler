@@ -34,11 +34,7 @@ public class ArcherTurn : State
     public override void Tick()
     {
         base.Tick();
-        if (!_controller.DemonBoss.isAlive)
-        {
-            _stateMachine.ChangeState(_stateMachine.WinState);
-        }
-        else if (_controller.Archer.isTurnComplete)
+        if (_controller.Archer.isTurnComplete)
         {
             _stateMachine.ChangeState(_stateMachine.EnemyTurnState);
             _controller.Archer.UnitUI.SetActive(false);

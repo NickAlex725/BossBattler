@@ -37,6 +37,6 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
-        //play death animation
+        
     }
 }
