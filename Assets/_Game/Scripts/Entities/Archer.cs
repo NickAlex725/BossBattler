@@ -6,6 +6,7 @@ public class Archer : Unit
 {
     public void PiercingShot(Unit enemy)
     {
+        _SFXSource.PlayOneShot(_specialSFX);
         UnitUI.SetActive(false);
         enemy.TakeDamage(_strength);
         _anim.SetTrigger("PS");

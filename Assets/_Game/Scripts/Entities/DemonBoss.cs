@@ -8,6 +8,7 @@ public class DemonBoss : Unit
 
     public override void Attack(Unit target)
     {
+        _SFXSource.PlayOneShot(_attackSFX);
         if(!isTaunted)
         {
             target = heros[Random.Range(0, 3)];

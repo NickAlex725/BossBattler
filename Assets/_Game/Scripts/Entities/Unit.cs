@@ -14,6 +14,13 @@ public class Unit : MonoBehaviour
     [SerializeField] protected Animator _anim;
     [SerializeField] public GameObject UnitUI;
 
+    [Header("SFX")]
+    protected AudioSource _SFXSource;
+    [SerializeField] protected AudioClip _attackSFX;
+    [SerializeField] protected AudioClip _defendSFX;
+    [SerializeField] protected AudioClip _specialSFX;
+    [SerializeField] protected AudioClip _deathSFX;
+
     protected Health _health;
     private bool _isDefending;
     public bool isAlive;
@@ -22,9 +29,10 @@ public class Unit : MonoBehaviour
 
     private void Awake()
     {
-        _health = GetComponent<Health>();
         isAlive = true;
+        _health = GetComponent<Health>();
         _anim = GetComponentInChildren<Animator>();
+        _SFXSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -35,6 +43,7 @@ public class Unit : MonoBehaviour
 
     public virtual void Attack(Unit target)
     {
+        _SFXSource.PlayOneShot(_attackSFX);
         UnitUI.SetActive(false);
         target.TakeDamage(_strength);
         _anim.SetTrigger("Attacking");
@@ -42,6 +51,7 @@ public class Unit : MonoBehaviour
 
     public virtual void Defend()
     {
+        _SFXSource.PlayOneShot(_defendSFX);
         UnitUI.SetActive(false);
         _defense = _defense * _defenseMultiplier;
         _isDefending = true;
@@ -53,6 +63,7 @@ public class Unit : MonoBehaviour
         _healthSlider.value = _health.TakeDamage(damage);
         if(_health.currentHealth <= 0)
         {
+            _SFXSource.PlayOneShot(_deathSFX);
             isAlive = false;
             _anim.SetBool("isAlive", isAlive);
         }
