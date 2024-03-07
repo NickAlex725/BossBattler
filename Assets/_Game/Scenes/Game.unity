@@ -901,10 +901,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedb5436d7f624342a53229b8c8527e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _strength: 25
-  _magicAttack: 5
+  _strength: 10
+  _magicAttack: 50
   _defense: 5
-  _defenseMultiplier: 0
+  _defenseMultiplier: 2
   _healthSlider: {fileID: 1722720828}
   _anim: {fileID: 0}
   UnitUI: {fileID: 1022069710}
@@ -1310,10 +1310,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf5017557e873f489263902e7b03ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _strength: 25
-  _magicAttack: 5
-  _defense: 5
-  _defenseMultiplier: 0
+  _strength: 20
+  _magicAttack: 0
+  _defense: 10
+  _defenseMultiplier: 2
   _healthSlider: {fileID: 1868504732}
   _anim: {fileID: 0}
   UnitUI: {fileID: 252107572}
@@ -2448,11 +2448,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8c0cddc6258233f429c48dea4fd2a633, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 30d883190b1bdea41881dde4d4ff96c0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.02
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3564,8 +3564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7326b1925c9fa6a41a56b5af24c9f794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _strength: 100
-  _magicAttack: 10
+  _strength: 50
+  _magicAttack: 0
   _defense: 10
   _defenseMultiplier: 0
   _healthSlider: {fileID: 801647889}
@@ -3594,7 +3594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5632de769920dd746ab4ccbb7305c74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 1000
+  _maxHealth: 250
   currentHealth: 0
 --- !u!82 &1097888407
 AudioSource:
@@ -3608,7 +3608,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.397
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5918,10 +5918,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9fa795086736b449460346c05cbf4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _strength: 25
-  _magicAttack: 5
+  _strength: 30
+  _magicAttack: 0
   _defense: 5
-  _defenseMultiplier: 0
+  _defenseMultiplier: 2
   _healthSlider: {fileID: 2029123022}
   _anim: {fileID: 0}
   UnitUI: {fileID: 841176134}
@@ -5932,6 +5932,7 @@ MonoBehaviour:
   isAlive: 0
   isTaunted: 0
   isTurnComplete: 0
+  _defenseLowerMult: 0
 --- !u!114 &1829979999
 MonoBehaviour:
   m_ObjectHideFlags: 0

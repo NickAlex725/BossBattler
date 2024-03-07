@@ -16,6 +16,7 @@ public class WizardTurn : State
     public override void Enter()
     {
         base.Enter();
+        _controller.Wizard.ResetDefense();
         _controller.Wizard.isTurnComplete = false;
         _controller.Wizard.UnitUI.SetActive(true);
         _controller.GameHUD.UpdateStateText(_stateMachine.CurrentState);

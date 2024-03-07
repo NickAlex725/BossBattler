@@ -8,7 +8,7 @@ public class Wizard : Unit
     {
         _SFXSource.PlayOneShot(_specialSFX);
         UnitUI.SetActive(false);
-        enemy.TakeDamage(_strength);
+        enemy.TakeDamage(_magicAttack);
         _anim.SetTrigger("Deathball");
     }
 }

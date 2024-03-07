@@ -22,7 +22,8 @@ public class Unit : MonoBehaviour
     [SerializeField] protected AudioClip _deathSFX;
 
     protected Health _health;
-    private bool _isDefending;
+    protected bool _isDefLowered;
+    protected bool _isDefIncreased;
     public bool isAlive;
     public bool isTaunted;
     public bool isTurnComplete;
@@ -54,12 +55,13 @@ public class Unit : MonoBehaviour
         _SFXSource.PlayOneShot(_defendSFX);
         UnitUI.SetActive(false);
         _defense = _defense * _defenseMultiplier;
-        _isDefending = true;
         _anim.SetTrigger("Defending");
+        _isDefIncreased = true;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
+        damage -= _defense;
         _healthSlider.value = _health.TakeDamage(damage);
         if(_health.currentHealth <= 0)
         {
@@ -76,6 +78,21 @@ public class Unit : MonoBehaviour
 
     public void ResetDefense()
     {
-        _defense = _defense / _defenseMultiplier;
+        if(_isDefIncreased)
+        {
+            _defense = _defense / _defenseMultiplier;
+            _isDefIncreased = false;
+        }
+        else if(_isDefLowered)
+        {
+            _defense = _defense * 2;
+            _isDefLowered = false;
+        }
+    }
+
+    public void lowerDefense(float lowerMult)
+    {
+        _defense = _defense / lowerMult;
+        _isDefLowered = true;
     }
 }

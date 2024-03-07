@@ -5120,9 +5120,10 @@ TextureImporter:
       Elementals_leaf_ranger_288x128_SpriteSheet_120: -377481724
       Elementals_leaf_ranger_288x128_SpriteSheet_144: 1932383051
       Elementals_leaf_ranger_288x128_SpriteSheet_91: -599625208
-      Elementals_leaf_ranger_288x128_SpriteSheet_141: -1842308421
       Elementals_leaf_ranger_288x128_SpriteSheet_166: 434834063
+      Elementals_leaf_ranger_288x128_SpriteSheet_141: -1842308421
       Elementals_leaf_ranger_288x128_SpriteSheet_216: 187419490
+      Elementals_leaf_ranger_288x128_SpriteSheet_227: 619061205
       Elementals_leaf_ranger_288x128_SpriteSheet_0: 84151780
       Elementals_leaf_ranger_288x128_SpriteSheet_42: -1553272483
       Elementals_leaf_ranger_288x128_SpriteSheet_78: -1520187827
@@ -5135,7 +5136,6 @@ TextureImporter:
       Elementals_leaf_ranger_288x128_SpriteSheet_121: -1108964905
       Elementals_leaf_ranger_288x128_SpriteSheet_174: 1780908169
       Elementals_leaf_ranger_288x128_SpriteSheet_125: 1130305534
-      Elementals_leaf_ranger_288x128_SpriteSheet_227: 619061205
       Elementals_leaf_ranger_288x128_SpriteSheet_231: -464489458
       Elementals_leaf_ranger_288x128_SpriteSheet_196: -1139897438
       Elementals_leaf_ranger_288x128_SpriteSheet_149: 1288248991
@@ -5227,10 +5227,10 @@ TextureImporter:
       Elementals_leaf_ranger_288x128_SpriteSheet_61: 2121253128
       Elementals_leaf_ranger_288x128_SpriteSheet_73: 386776321
       Elementals_leaf_ranger_288x128_SpriteSheet_3: 110084856
-      Elementals_leaf_ranger_288x128_SpriteSheet_59: -456461523
-      Elementals_leaf_ranger_288x128_SpriteSheet_127: 168498967
-      Elementals_leaf_ranger_288x128_SpriteSheet_33: -1647838162
       Elementals_leaf_ranger_288x128_SpriteSheet_228: -770430102
+      Elementals_leaf_ranger_288x128_SpriteSheet_127: 168498967
+      Elementals_leaf_ranger_288x128_SpriteSheet_59: -456461523
+      Elementals_leaf_ranger_288x128_SpriteSheet_33: -1647838162
       Elementals_leaf_ranger_288x128_SpriteSheet_184: 2094142442
       Elementals_leaf_ranger_288x128_SpriteSheet_218: 1288987641
       Elementals_leaf_ranger_288x128_SpriteSheet_167: -1220657094

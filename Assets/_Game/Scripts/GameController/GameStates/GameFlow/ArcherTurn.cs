@@ -16,6 +16,8 @@ public class ArcherTurn : State
     public override void Enter()
     {
         base.Enter();
+        _controller.DemonBoss.ResetDefense();
+        _controller.Archer.ResetDefense();
         _controller.Archer.isTurnComplete = false;
         _controller.Archer.UnitUI.SetActive(true);
         _controller.GameHUD.UpdateStateText(_stateMachine.CurrentState);
